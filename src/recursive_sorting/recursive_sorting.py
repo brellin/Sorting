@@ -1,4 +1,4 @@
-test_list = [6, 5, 3, 1, 8, 7, 2, 4, 99, 52, 500004, 588841]
+test_list = [6, 5, 3, 1, 8, 7, 2, 4]
 
 # complete the helpe function below to merge 2 sorted arrays
 
@@ -43,16 +43,16 @@ def merge(arrA, arrB):
 
 
 def merge_sort(arr):
-    # TODO Find the middle point to divide the array into two halves:
+    # Find the middle point to divide the array into two halves:
     print(arr)
     mid = len(arr) // 2
     first = arr[:mid]
     second = arr[mid:]
-    # TODO Call mergeSort for first half:
+    # Call mergeSort for first half:
     first = merge_sort(first) if len(first) > 1 else first
-    # TODO Call mergeSort for second half:
+    # Call mergeSort for second half:
     second = merge_sort(second) if len(second) > 1 else second
-    # TODO Merge the two halves sorted in step 2 and 3:
+    # Merge the two halves sorted in step 2 and 3:
     return merge(first, second)
 
 
