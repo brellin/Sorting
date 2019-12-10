@@ -43,15 +43,19 @@ def merge(arrA, arrB):
 
 
 def merge_sort(arr):
+
     # Find the middle point to divide the array into two halves:
     print(arr)
     mid = len(arr) // 2
     first = arr[:mid]
     second = arr[mid:]
+
     # Call mergeSort for first half:
     first = merge_sort(first) if len(first) > 1 else first
+
     # Call mergeSort for second half:
     second = merge_sort(second) if len(second) > 1 else second
+
     # Merge the two halves sorted in step 2 and 3:
     return merge(first, second)
 
